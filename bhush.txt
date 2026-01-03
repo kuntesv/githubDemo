@@ -1,0 +1,91 @@
+8. workflow 2: https://github.com/kuntesv/githubDemo add your branch with some modification into this repo
+    1. clone a repository : git clone https://reponame
+        
+        ```jsx
+        C:\Workdir\newgen\Weekend\workflow2>**git clone https://github.com/kuntesv/githubDemo.git**
+        Cloning into 'githubDemo'...
+        remote: Enumerating objects: 21, done.
+        remote: Counting objects: 100% (21/21), done.
+        remote: Compressing objects: 100% (12/12), done.
+        remote: Total 21 (delta 4), reused 17 (delta 2), pack-reused 0 (from 0)
+        Receiving objects: 100% (21/21), done.
+        Resolving deltas: 100% (4/4), done.
+        
+        C:\Workdir\newgen\Weekend\workflow2>
+        ```
+        
+    2. cd into repository 
+        
+        ```jsx
+        C:\Workdir\newgen\Weekend\workflow2>**cd githubDemo**
+        ```
+        
+    3. create a feature branch with own name
+        
+        ```jsx
+        C:\Workdir\newgen\Weekend\workflow2\githubDemo>**git branch**
+        * main
+        
+        C:\Workdir\newgen\Weekend\workflow2\githubDemo>**git checkout -b harsha**
+        Switched to a new branch 'harsha'
+        
+        C:\Workdir\newgen\Weekend\workflow2\githubDemo>**git branch**
+        * harsha
+          main
+        
+        C:\Workdir\newgen\Weekend\workflow2\githubDemo>
+        ```
+        
+    4. add a new file and make some text into it
+    5. track with version control
+        
+        ```jsx
+        C:\Workdir\newgen\Weekend\workflow2\githubDemo>**git status**
+        On branch harsha
+        Untracked files:
+          (use "git add <file>..." to include in what will be committed)
+                harsha.txt
+        
+        nothing added to commit but untracked files present (use "git add" to track)
+        
+        C:\Workdir\newgen\Weekend\workflow2\githubDemo>**git add .**
+        
+        C:\Workdir\newgen\Weekend\workflow2\githubDemo>**git status**
+        On branch harsha
+        Changes to be committed:
+          (use "git restore --staged <file>..." to unstage)
+                new file:   harsha.txt
+        
+        C:\Workdir\newgen\Weekend\workflow2\githubDemo>
+        ```
+        
+    6. commit to local area stage
+        
+        ```jsx
+        C:\Workdir\newgen\Weekend\workflow2\githubDemo>git commit -m "added file by harsha"
+        [harsha 27e365a] added file by harsha
+         1 file changed, 1 insertion(+)
+         create mode 100644 harsha.txt
+        ```
+        
+    7. push branch to remote 
+        
+        ```jsx
+        C:\Workdir\newgen\Weekend\workflow2\githubDemo>**git push origin harsha**
+        Enumerating objects: 4, done.
+        Counting objects: 100% (4/4), done.
+        Delta compression using up to 8 threads
+        Compressing objects: 100% (2/2), done.
+        Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
+        Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+        remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+        remote:
+        remote: Create a pull request for 'harsha' on GitHub by visiting:
+        remote:      https://github.com/kuntesv/githubDemo/pull/new/harsha
+        remote:
+        To https://github.com/kuntesv/githubDemo.git
+         * [new branch]      harsha -> harsha
+        
+        ```
+        
+    8. Raise a PR / MR with main
